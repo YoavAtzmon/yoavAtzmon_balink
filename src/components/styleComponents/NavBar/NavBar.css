@@ -1,0 +1,60 @@
+.navbarH {
+  background-color: #0000ffab;
+  height: 6rem;
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+@media (max-width: 250px) {
+  .navbarH {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    height: 6.5rem;
+  }
+}
+
+.navbarE {
+  background-color: #0000ffab;
+  height: 6rem;
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 2.5rem;
+  padding-right: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+@media (max-width: 250px) {
+  .navbarE {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    height: 6.5rem;
+  }
+}
+/*# sourceMappingURL=NavBar.css.map */

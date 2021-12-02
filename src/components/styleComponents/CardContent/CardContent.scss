@@ -1,0 +1,32 @@
+.cardcontent {
+    h1 {
+        color: #000000;
+        font-family: system-ui;
+    }
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #4949697d;
+        border-radius: 1rem;
+        padding: 1rem;
+
+        img {
+            width: 2rem;
+            margin: 0.5rem;
+        }
+        h2 {
+            font-family: "Courier New", Courier, monospace;
+            color: blanchedalmond;
+            @media (max-width: 200px) {
+                font-size: large;
+            }
+        }
+    }
+    h2 {
+        font-variant-numeric: "revert";
+    }
+    h3 {
+        text-decoration: underline;
+    }
+}

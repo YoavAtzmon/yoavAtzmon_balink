@@ -1,0 +1,8 @@
+@import "../SassVarbs/SassVarbs.scss";
+
+.selectE {
+    @include selectStyle(2%,none);
+}
+.selectH {
+    @include selectStyle(none,0%);
+}

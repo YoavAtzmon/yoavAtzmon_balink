@@ -1,0 +1,11 @@
+.icon{
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    right: 2rem;;
+    top:7rem;
+    cursor: pointer;
+    &:hover{
+      background: gray;
+    }
+}

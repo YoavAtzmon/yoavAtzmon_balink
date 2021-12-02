@@ -1,0 +1,8 @@
+@import "../SassVarbs/SassVarbs.scss";
+
+.navbarH{
+    @include nav(2.5rem)
+}
+.navbarE{
+    @include nav(none)
+}

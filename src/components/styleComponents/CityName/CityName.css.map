@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,eAAe,EAAE,SAAS;EAC1B,SAAS,EAAE,MAAM;CACpB",
+    "sources": [
+        "CityName.scss"
+    ],
+    "names": [],
+    "file": "CityName.css"
+}

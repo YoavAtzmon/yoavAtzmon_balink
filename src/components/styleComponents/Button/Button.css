@@ -1,0 +1,18 @@
+.link {
+  margin: 1rem;
+  cursor: pointer;
+  color: white;
+  font-family: inherit;
+  font-size: large;
+}
+
+@media screen and (max-width: 150px) {
+  .link {
+    margin-right: 0.625rem;
+  }
+}
+
+.link:hover {
+  color: #a38d8d;
+}
+/*# sourceMappingURL=Button.css.map */

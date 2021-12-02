@@ -1,0 +1,13 @@
+.icon {
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  right: 2rem;
+  top: 7rem;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background: gray;
+}
+/*# sourceMappingURL=LangIcon.css.map */
