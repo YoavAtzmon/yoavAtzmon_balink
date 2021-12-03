@@ -26,13 +26,14 @@ export default function Details() {
                     <div className="daycard" onClick={() => Navigate('/')}>
                         <CardText data={specific} />
                     </div>
+                    <Footer />
                 </div>
                 :
                 <div className="containerThree">
                     <Type />
+                    <Footer />
                 </div>
             }
-            <Footer />
         </div>
 
     )

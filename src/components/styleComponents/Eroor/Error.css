@@ -1,0 +1,26 @@
+.error {
+  width: 40%;
+  color: #c30000d6;
+  position: absolute;
+  bottom: 13rem;
+  text-align: center;
+}
+
+@media (max-height: 680px) {
+  .error {
+    bottom: 5rem;
+  }
+}
+
+@media (max-width: 250px) {
+  .error {
+    bottom: 3rem;
+  }
+}
+
+@media (max-width: 200px) {
+  .error {
+    bottom: 1.5rem;
+  }
+}
+/*# sourceMappingURL=Error.css.map */

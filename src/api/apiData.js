@@ -1,9 +1,9 @@
 import axios from "axios"
 
-export const apiService ={
+export const apiService = {
     getData,
     getCityWoeid
-   
+
 }
 
 async function getData(locationKey) {

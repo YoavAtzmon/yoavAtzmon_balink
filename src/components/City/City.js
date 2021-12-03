@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux"
+import ErrorHandle from "../Error/Error";
 import "../styleComponents/CityName/CityName.css"
 
 export default function City() {
@@ -6,15 +7,15 @@ export default function City() {
     const city = useSelector((state) => state.weather.value);
     const lang = useSelector((state) => state.language.value);
     let cityTitle = city ? city.title : '';
-    
-        if (cityTitle && cityTitle.includes(" ")) {
-            cityTitle = cityTitle.replace(' ', '')
-        }
-   
+
+    if (cityTitle && cityTitle.includes(" ")) {
+        cityTitle = cityTitle.replace(' ', '')
+    }
+
     return (
-        city&&lang&&
+        city?
         <h1 className="cityname">
-                {lang[cityTitle.toLowerCase()]}
-        </h1>
+            {lang.lang === 'hebrew' ? lang[cityTitle.toLowerCase()] : city.title}
+        </h1> : <ErrorHandle err={lang.err + " " + lang.cors} />
     )
 }

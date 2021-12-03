@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,eAAe,EAAE,SAAS;EAC1B,SAAS,EAAE,MAAM;CACpB",
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACN,SAAS,EAAE,MAAM;EACjB,YAAY,EAAE,WAAW;EACzB,WAAW,EAAE,GAAG;EAChB,WAAW,EAAE,OAAO;CACvB",
     "sources": [
         "CityName.scss"
     ],

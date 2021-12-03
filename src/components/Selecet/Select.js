@@ -9,32 +9,33 @@ export default function Selects() {
 
     const dispatch = useDispatch();
     const lang = useSelector((state) => state.language.value);
-    const [error,setError] = useState('');
+    const sixDaysWeather = useSelector(state => state.weather.value)
+    const [error, setError] = useState('');
 
     async function handleOnChange(event) {
-        if(event.target.value !== ''){
-
-            try{
+        if (event.target.value !== '') {
+            try {
                 setError('');
                 const result = await apiService.getCityWoeid(event.target.value)
                 dispatch(getWeatherData(result))
             }
-            catch(error){
-                setError(`Somthing went wrong ):`)
+            catch (error) {
+                setError(lang.err)
             }
         }
     }
 
-    useEffect(async()=>{
-        try{
-        const result = await apiService.getCityWoeid('paris')
-        dispatch(getWeatherData(result))
+    useEffect(async () => {
+        try {
+            setError('')
+            const result = await apiService.getCityWoeid('paris')
+            dispatch(getWeatherData(result))
         }
-        catch(error){
+        catch (error) {
             console.error('error !', error)
-            setError('Somthing went wrong :(')
+            setError(lang.err)
         }
-    },[])
+    }, [])
 
     return (
         <>
@@ -46,7 +47,7 @@ export default function Selects() {
                 <option value="753692">{lang.barcelona}</option>
                 <option value="721943">{lang.rome} </option>
             </Select> */}
-{/* 
+            {/* 
             <Select
                 name="select"
                 onChange={handleOnChange}
@@ -56,8 +57,8 @@ export default function Selects() {
                 hebrew={lang.lang == 'hebrew' ? '0%' : null}
                 english={lang.lang == 'english' ? '0%' :null}
             > */}
-
-            <select 
+            {sixDaysWeather ?
+            <select
                 className={lang.lang === 'hebrew' ? 'selectH' : 'selectE'}
                 name="select"
                 onChange={handleOnChange}
@@ -65,7 +66,6 @@ export default function Selects() {
                 size="4"
                 value="select"
             >
-                
                 <optgroup label={lang.europe}>
                     <option value='barcelona'>{lang.barcelona}</option>
                     <option value='amsterdam'>{lang.amsterdam}</option>
@@ -92,9 +92,8 @@ export default function Selects() {
                 <optgroup label={lang.australia}>
                     <option value='sydney'>{lang.sydney}</option>
                 </optgroup>
-            </select>
-            {/* </Select> */}
-            {error&&<ErrorHandle err={error} />}
-        </>
+            </select>  : "" }
+             {error && <ErrorHandle err={error} />}
+        </> 
     )
 }

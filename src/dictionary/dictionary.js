@@ -31,7 +31,9 @@ export const english = {
     today : 'Today',
     tomorrow: 'Tomorrow',
     miles : 'miles',
-    mb:'mb'
+    mb:'mb',
+    err:`Somthing went wrong :(`,
+    cors:'you need to add cors to your browser'
 }
 
 export const hebrew = {
@@ -96,6 +98,7 @@ export const hebrew = {
     Showers: 'ממטרים',
     HeavyCloud : 'מעונן כבד',
     LightCloud : 'מעונן קל',
-    Clear :'בהיר'
-
+    Clear :'בהיר',
+    err:' :( משהו השתבש',
+    cors : 'התקינו קורס(cors) בדפדפן'
 }
