@@ -22,8 +22,7 @@ async function getCityWoeid(locationName) {
         return getData(result.data[0]['woeid'])
     }
     catch (error) {
-        console.error(`faild when try to get the current weather`, error)
+        console.error(`faild when try to get the city woeid`, error)
     }
 }
-
 

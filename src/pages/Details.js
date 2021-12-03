@@ -4,12 +4,10 @@ import CardText from "../components/Cards/CardText/CardText";
 import City from "../components/City/City";
 import Header from "../components/Header/Header";
 import Language from "../components/Language/Language";
-import { Container } from "../components/styleComponents/Container.style";
-
-import { DayCard } from "../components/styleComponents/DayCard.style";
 import Type from "../components/Type/Type";
 import "../components/styleComponents/Container/Container.css"
 import Footer from "../components/Footer/Footer";
+import DateSearch from "../components/DateSearch/DateSearch";
 
 export default function Details() {
 
@@ -22,6 +20,7 @@ export default function Details() {
             <Language />
             {specific ?
                 <div className="containerTwo">
+                    <DateSearch />
                     <City />
                     <div className="daycard" onClick={() => Navigate('/')}>
                         <CardText data={specific} />

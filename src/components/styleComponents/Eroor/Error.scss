@@ -1,4 +1,4 @@
-.error{
+.corserror{
     width: 40%;
     color: #c30000d6;
     position: absolute;
@@ -13,4 +13,7 @@
     @media(max-width:200px){
         bottom:1.5rem;
     }
+}
+.error{
+    color: #c30000d6;
 }
