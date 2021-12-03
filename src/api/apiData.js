@@ -8,7 +8,7 @@ export const apiService = {
 
 async function getData(locationKey) {
     try {
-        const result = await axios.get(`https://www.metaweather.com/api/location/${locationKey}/`)
+        const result = await axios.get(`http://www.metaweather.com/api/location/${locationKey}/`)
         return result.data
     }
     catch (error) {
@@ -18,7 +18,7 @@ async function getData(locationKey) {
 
 async function getCityWoeid(locationName) {
     try {
-        const result = await axios.get(`https://www.metaweather.com/api/location/search/?query=${locationName}`)
+        const result = await axios.get(`http://www.metaweather.com/api/location/search/?query=${locationName}`)
         return getData(result.data[0]['woeid'])
     }
     catch (error) {
