@@ -37,6 +37,8 @@
     margin: 0.1rem;
     padding: 0.1rem;
     top: 25%;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -97,6 +99,8 @@
     margin: 0.1rem;
     padding: 0.1rem;
     top: 25%;
+    left: 0;
+    right: 0;
   }
 }
 

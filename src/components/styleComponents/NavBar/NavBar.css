@@ -36,18 +36,18 @@
   font-size: large;
 }
 
-@media screen and (max-width: 150px) {
-  .navbarH div {
-    margin-right: 0.625rem;
-  }
-}
-
 .navbarH div:hover {
   color: #a38d8d;
 }
 
 .navbarH p {
   color: white;
+}
+
+@media (max-width: 165px) {
+  .navbarH p {
+    display: none;
+  }
 }
 
 .navbarE {
@@ -88,17 +88,17 @@
   font-size: large;
 }
 
-@media screen and (max-width: 150px) {
-  .navbarE div {
-    margin-right: 0.625rem;
-  }
-}
-
 .navbarE div:hover {
   color: #a38d8d;
 }
 
 .navbarE p {
   color: white;
+}
+
+@media (max-width: 165px) {
+  .navbarE p {
+    display: none;
+  }
 }
 /*# sourceMappingURL=NavBar.css.map */

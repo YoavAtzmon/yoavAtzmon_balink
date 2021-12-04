@@ -5,9 +5,7 @@ $fantasy : fantasy;
 $sanso : Source Sans Pro;
 $sans : sans-serif;
 
-
 //Colors:
-
 $white : white;
 $greyhover : #a38d8d;
 $black : black;
@@ -21,6 +19,8 @@ $cardHover :  rgba(0, 0, 0, 0.2);
 $calendar : rgba(245, 222, 179, 0.179);
 $webic : -webkit-pictograph;
 
+
+//@mixing
 @mixin selectStyle($left,$right) {
     padding: 1rem;
     margin: 3rem;
@@ -52,6 +52,8 @@ $webic : -webkit-pictograph;
         margin: 0.1rem;
         padding: 0.1rem;
         top:25%;
+        left: 0;
+        right: 0;
     }
     @media (max-width: 430px) {
         width: 15rem;
@@ -79,7 +81,8 @@ $webic : -webkit-pictograph;
     position: fixed;
     top: 0;
     width: 100%;
-    @media(max-width:250px){
+    
+    @media(max-width: 250px){
         justify-content: center;
         padding-left: 0rem;
         padding-right: 0rem;
@@ -91,15 +94,15 @@ $webic : -webkit-pictograph;
         color:$white;
         font-family: $inherit;
         font-size: large;
-        @media screen and (max-width :150px){
-            margin-right:0.625rem;
-        }
         &:hover{
             color:$greyhover;
         }
     }
     p{
         color: $white;
+        @media(max-width:165px){
+            display: none;
+        }
     }
 }
 

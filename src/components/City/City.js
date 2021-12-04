@@ -14,9 +14,11 @@ export default function City() {
     }
 
     return (
-        city?
-        <h1 className="cityname">
-            {lang.lang === 'hebrew' ? lang[cityTitle.toLowerCase()] : city.title}
-        </h1> : <ErrorHandle err={lang.err + " " + lang.cors} />
+        city ?
+            <h1 className="cityname">
+                {lang.lang === 'hebrew' ? lang[cityTitle.toLowerCase()] : city.title}
+            </h1> :
+            <ErrorHandle err={lang.err + " " + lang.cors} />
+
     )
 }

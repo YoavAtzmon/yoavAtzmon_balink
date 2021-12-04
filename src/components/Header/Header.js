@@ -15,7 +15,6 @@ export default function Header() {
                 <div onClick={() => Navigate('/')}>{lang.home}</div>
                 <p>|</p>
                 <div onClick={() => Navigate('/details')}>{lang.details}</div>
-                
             </div>
 
         </>

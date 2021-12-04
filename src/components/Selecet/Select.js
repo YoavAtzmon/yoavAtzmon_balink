@@ -13,11 +13,13 @@ export default function Selects() {
     const [error, setError] = useState('');
 
     //setting the city state by the user selection
-    async function handleOnChange(event,paris) {
+    async function handleOnChange(event, paris) {
+
         if (event.target || paris === 'paris') {
+
             try {
                 setError('');
-                const result = await apiService.getCityWoeid(paris ? paris : event.target.value )
+                const result = await apiService.getCityWoeid(paris ? paris : event.target.value)
                 dispatch(getWeatherData(result))
             }
             catch (error) {
@@ -28,8 +30,8 @@ export default function Selects() {
 
     //display Paris weather by default 
     useEffect(() => {
-        handleOnChange('','paris')
-    },[])
+        handleOnChange('', 'paris')
+    }, [])
 
 
     return (

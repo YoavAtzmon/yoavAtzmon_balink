@@ -41,7 +41,7 @@
 
 @media (max-width: 400px) {
   .daycard {
-    min-width: 70%;
+    min-width: 61%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;

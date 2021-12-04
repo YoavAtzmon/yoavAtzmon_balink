@@ -11,7 +11,7 @@ export default function Language() {
     const lang = useSelector((state) => state.language.value)
     const dispatch = useDispatch()
 
-    function language(){
+    function language() {
         localStorage.lang = JSON.stringify(lang.lang === 'hebrew' ? english : hebrew)
         dispatch(changeLanguage(lang.lang === 'hebrew' ? english : hebrew))
     }
