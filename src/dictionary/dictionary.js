@@ -1,3 +1,5 @@
+//dictionary for english and hebrew support
+
 export const english = {
     lang : 'english',
     home: 'Home',
@@ -34,7 +36,7 @@ export const english = {
     mb:'mb',
     err:`Somthing went wrong :(`,
     cors:'you need to add cors to your browser',
-    reserved : '@ALL RIGHTS RESERVED YOAV ATZMON 2021'
+    reserved :'©ALL RIGHTS RESERVED YOAV ATZMON 2021'
 }
 
 export const hebrew = {
@@ -54,8 +56,8 @@ export const hebrew = {
     amsterdam : 'אמסטרדם',
     london : 'לונדון',
     toronto:'טורונטו',
-    mexico : 'מקסיקו',
-    riodejaneiro : 'ריו',
+    mexicocity : 'מקסיקו סיטי',
+    brasília : 'ברזיליה',
     buenosaires : 'בואנוס אייריס',
     lima: 'לימה',
     tokyo:'טוקיו',
@@ -102,5 +104,5 @@ export const hebrew = {
     Clear :'בהיר',
     err:' :( משהו השתבש',
     cors : 'התקינו קורס(cors) בדפדפן',
-    reserved : '@כל הזכויות שמורות יואב עצמון 2021'
+    reserved : '©כל הזכויות שמורות יואב עצמון 2021'
 }

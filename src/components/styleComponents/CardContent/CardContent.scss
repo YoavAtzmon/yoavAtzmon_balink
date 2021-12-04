@@ -1,7 +1,10 @@
+@import '../SassVarbs/SassVarbs.scss';
+
 .cardcontent {
+    
     h1 {
-        color: #000000;
-        font-family: system-ui;
+        color: $black;
+        font-family: $system;
     }
     section {
         display: flex;
@@ -15,8 +18,8 @@
             margin: 0.5rem;
         }
         h2 {
-            font-family: -webkit-pictograph;
-            color: black;
+            font-family: $sans;
+            color: $black;
             font-weight: 100;
             @media (max-width: 200px) {
                 font-size: large;

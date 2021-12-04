@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
-import '../styleComponents/Button/Button.css'
 import '../styleComponents/NavBar/NavBar.css'
+
 
 export default function Header() {
 
@@ -12,8 +12,10 @@ export default function Header() {
     return (
         <>
             <div className={lang.lang === 'hebrew' ? 'navbarH' : 'navbarE'}>
-                <div className="link" onClick={() => Navigate('/')}>{lang.home}</div>
-                <div className="link" onClick={() => Navigate('/details')}>{lang.details}</div>
+                <div onClick={() => Navigate('/')}>{lang.home}</div>
+                <p>|</p>
+                <div onClick={() => Navigate('/details')}>{lang.details}</div>
+                
             </div>
 
         </>

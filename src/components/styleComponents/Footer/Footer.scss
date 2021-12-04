@@ -1,7 +1,10 @@
+@import '../SassVarbs/SassVarbs.scss';
+
 .footer{
     text-align: center;
     h3{
-        font-family: 'Source Sans Pro';
+        font-family: $sans;
         padding: 1rem;
+        font-size: 1.3rem;
     }
 }

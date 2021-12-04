@@ -7,14 +7,14 @@ import { configureStore } from '@reduxjs/toolkit'
 import weatherReducer from "./store/Weather"
 import languageReducer from "./store/Language"
 import specificReducer from "./store/Specific"
-import './index.css'
 import reportWebVitals from './reportWebVitals';
+import './components/styleComponents/Body/Body.css'
 
 const store = configureStore({
   reducer: {
     weather: weatherReducer,
-    language :  languageReducer,
-    specific : specificReducer
+    language: languageReducer,
+    specific: specificReducer
   }
 })
 

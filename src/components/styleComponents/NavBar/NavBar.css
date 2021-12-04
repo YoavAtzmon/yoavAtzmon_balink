@@ -28,6 +28,28 @@
   }
 }
 
+.navbarH div {
+  margin: 1rem;
+  cursor: pointer;
+  color: white;
+  font-family: inherit;
+  font-size: large;
+}
+
+@media screen and (max-width: 150px) {
+  .navbarH div {
+    margin-right: 0.625rem;
+  }
+}
+
+.navbarH div:hover {
+  color: #a38d8d;
+}
+
+.navbarH p {
+  color: white;
+}
+
 .navbarE {
   background-color: #0000ffab;
   height: 6rem;
@@ -56,5 +78,27 @@
     padding-right: 0rem;
     height: 6.5rem;
   }
+}
+
+.navbarE div {
+  margin: 1rem;
+  cursor: pointer;
+  color: white;
+  font-family: inherit;
+  font-size: large;
+}
+
+@media screen and (max-width: 150px) {
+  .navbarE div {
+    margin-right: 0.625rem;
+  }
+}
+
+.navbarE div:hover {
+  color: #a38d8d;
+}
+
+.navbarE p {
+  color: white;
 }
 /*# sourceMappingURL=NavBar.css.map */

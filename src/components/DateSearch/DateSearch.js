@@ -9,16 +9,19 @@ export default function DateSearch() {
     const sixDaysWeather = useSelector((state) => state.weather.value)
     const dispatch = useDispatch()
 
+    //formating the calendar start and end dates
     let start = new Date()
     let end = new Date(Date.now(start) + 432000000)
     start = start.toISOString().split('T')[0]
     end = end.toISOString().split('T')[0]
 
+
+    //display the selected date from the calendar
     async function handleChange(event) {
-        console.log(event.target.value)
+
         if (sixDaysWeather) {
             sixDaysWeather.consolidated_weather.forEach(item => {
-                if (item['applicable_date'] == event.target.value) {
+                if (item['applicable_date'] === event.target.value) {
                     dispatch(getSpecific(item))
                 }
             })

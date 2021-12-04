@@ -1,6 +1,6 @@
 input[type=date] {
   background-color: #ffffff5e;
-  font-family: 'Source Sans Pro';
+  font-family: Source Sans Pro;
   font-size: larger;
   border: none;
   border-radius: 0.32rem;
@@ -21,6 +21,6 @@ input[type=date] {
 }
 
 ::-webkit-calendar-picker-indicator:hover {
-  background-color: rgba(22, 22, 21, 0.474);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=Date.css.map */

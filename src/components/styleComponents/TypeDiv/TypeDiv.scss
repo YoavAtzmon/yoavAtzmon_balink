@@ -1,5 +1,7 @@
+@import '../SassVarbs/SassVarbs.scss';
+
 .typed{
-    font-family: fantasy;
+    font-family: $fantasy;
     font-size: 2rem;
     margin:4rem;
     @media(max-width:500px){

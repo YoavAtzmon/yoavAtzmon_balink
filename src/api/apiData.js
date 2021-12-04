@@ -6,6 +6,7 @@ export const apiService = {
 
 }
 
+//api request to get sixdays weather by woeid
 async function getData(locationKey) {
     try {
         const result = await axios.get(`https://www.metaweather.com/api/location/${locationKey}/`)
@@ -16,6 +17,7 @@ async function getData(locationKey) {
     }
 }
 
+//api request to get location details by location name
 async function getCityWoeid(locationName) {
     try {
         const result = await axios.get(`https://www.metaweather.com/api/location/search/?query=${locationName}`)

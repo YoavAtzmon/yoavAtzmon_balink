@@ -1,3 +1,4 @@
+@import '../SassVarbs/SassVarbs.scss';
 
 .daycard{
     display:flex;
@@ -5,7 +6,7 @@
     text-align: center;
     justify-content:center;
     flex-direction : column;
-    background-color:#ffffff5e;
+    background-color:$cardColor;
     font-family: 'Source Sans Pro';
     padding:2rem;
     width:37%;
@@ -14,7 +15,7 @@
     margin:1.3rem;
     cursor: pointer;
     &:hover{
-        background: rgba(0, 0, 0, 0.2);
+        background: $cardHover;
     }
     @media(min-width:1000px){
         width:25%;

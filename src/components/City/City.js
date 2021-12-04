@@ -8,6 +8,7 @@ export default function City() {
     const lang = useSelector((state) => state.language.value);
     let cityTitle = city ? city.title : '';
 
+    //formating the city name in order to make it an object key
     if (cityTitle && cityTitle.includes(" ")) {
         cityTitle = cityTitle.replace(' ', '')
     }

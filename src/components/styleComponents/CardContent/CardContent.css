@@ -1,5 +1,5 @@
 .cardcontent h1 {
-  color: #000000;
+  color: black;
   font-family: system-ui;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .cardcontent section h2 {
-  font-family: -webkit-pictograph;
+  font-family: sans-serif;
   color: black;
   font-weight: 100;
 }

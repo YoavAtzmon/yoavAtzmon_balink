@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { english } from "../dictionary/dictionary";
 
-const initialStateValue = english
+const initialStateValue = localStorage.lang ? JSON.parse(localStorage.lang) : english
 
 export const languageSlice = createSlice({
     name: 'language',

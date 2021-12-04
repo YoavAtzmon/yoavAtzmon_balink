@@ -6,6 +6,7 @@ import "../styleComponents/AllCards/AllCards.css"
 
 export default function Card() {
 
+    //geting all the data from redux state management
     const sixDaysWeather = useSelector(state => state.weather.value)
 
     return (

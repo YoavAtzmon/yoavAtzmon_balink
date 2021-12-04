@@ -1,6 +1,7 @@
+@import '../SassVarbs/SassVarbs.scss';
 .corserror{
     width: 40%;
-    color: #c30000d6;
+    color: $error;
     position: absolute;
     bottom: 13rem;
     text-align: center;
@@ -15,5 +16,5 @@
     }
 }
 .error{
-    color: #c30000d6;
+    color: $error;
 }

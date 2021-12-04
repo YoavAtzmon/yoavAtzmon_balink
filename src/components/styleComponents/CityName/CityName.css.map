@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,SAAS,CAAC;EACN,SAAS,EAAE,MAAM;EACjB,YAAY,EAAE,WAAW;EACzB,WAAW,EAAE,GAAG;EAChB,WAAW,EAAE,OAAO;CACvB",
+    "mappings": "AAEA,AAAA,SAAS,CAAC;EACN,SAAS,EAAE,MAAM;EACjB,YAAY,EAAE,WAAW;EACzB,WAAW,EAAE,GAAG;EAChB,WAAW,ECHJ,OAAO;CDIjB",
     "sources": [
-        "CityName.scss"
+        "CityName.scss",
+        "../SassVarbs/SassVarbs.scss"
     ],
     "names": [],
     "file": "CityName.css"

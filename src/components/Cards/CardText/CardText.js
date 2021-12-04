@@ -5,18 +5,25 @@ import "../../styleComponents/CardContent/CardContent.css"
 
 export default function CardText({ data, index }) {
 
+
     const lang = useSelector((state) => state.language.value)
     const dispatch = useDispatch();
     const Navigate = useNavigate()
 
+
+    //creating a var in order to success get the icon for the weather status
     const discription = data.weather_state_name.includes(' ') ?
         data.weather_state_name[0].toLowerCase() + data.weather_state_name[data.weather_state_name.indexOf(' ') + 1].toLowerCase()
         :
         data.weather_state_name[0].toLowerCase()
 
-    let date = new Date(data.applicable_date).toDateString().slice(0, 10);
-    if (date[8] == 0) date = date.slice(0, 8) + ' ' + date.slice(9)
 
+    //reorder the date for the format i want to display
+    let date = new Date(data.applicable_date).toDateString().slice(0, 10);
+    if (Number(date[8]) === 0) date = date.slice(0, 8) + ' ' + date.slice(9)
+
+
+    //by clicking on a specific day you'll navigate to the details page
     function handleClicke() {
         dispatch(getSpecific(data))
         Navigate('/details')
@@ -60,7 +67,7 @@ export default function CardText({ data, index }) {
                 {lang.visibility} - {data.visibility.toFixed(2)} {lang.miles}
             </h3>
             <h3>
-                {lang.pressure} - {data.air_pressure}{lang.mb}
+                {lang.pressure} - {data.air_pressure} {lang.mb}
             </h3>
         </div>
 

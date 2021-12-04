@@ -1,6 +1,8 @@
+@import '../SassVarbs/SassVarbs.scss';
+
 input[type=date]{
-    background-color: #ffffff5e;
-    font-family: 'Source Sans Pro';
+    background-color: $cardColor;
+    font-family: $sanso;
     font-size: larger;
     border: none;
     border-radius: 0.32rem;
@@ -12,9 +14,9 @@ input[type=date]{
     }
 }
 ::-webkit-calendar-picker-indicator{
-    background-color: rgba(245, 222, 179, 0.179);
+    background-color:$calendar;
     cursor: pointer;
     &:hover{
-        background-color: rgba(22, 22, 21, 0.474);
+        background-color: $cardHover;
     }
 }

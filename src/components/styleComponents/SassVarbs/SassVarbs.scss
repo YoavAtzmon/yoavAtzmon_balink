@@ -1,9 +1,30 @@
+//Fonts:
+$inherit : inherit;
+$system : system-ui;
+$fantasy : fantasy;
+$sanso : Source Sans Pro;
+$sans : sans-serif;
 
+
+//Colors:
+
+$white : white;
+$greyhover : #a38d8d;
+$black : black;
+$blue : #0000ffab;
+$grey : #ffffff00;
+$error : #c30000d6;
+$optionColor : #3d62874a;
+$optionHover : #ffffff11;
+$cardColor : #ffffff5e;
+$cardHover :  rgba(0, 0, 0, 0.2);
+$calendar : rgba(245, 222, 179, 0.179);
+$webic : -webkit-pictograph;
 
 @mixin selectStyle($left,$right) {
     padding: 1rem;
     margin: 3rem;
-    background: #ffffff00;
+    background: $grey;
     border: none;
     border-radius: 0.5rem;
     width: 25rem;
@@ -16,10 +37,10 @@
     left : $left;
     right : $right;
     option {
-        background: #3d62874a;
+        background: $optionColor;
         cursor: pointer;
         &:hover {
-            background: #ffffff11;
+            background: $optionHover;
         }
     }
     @media (max-width: 1130px) {
@@ -47,7 +68,7 @@
 }
 
 @mixin nav($rightPadd) {
-    background-color: #0000ffab;
+    background-color: $blue;
     height: 6rem;
     border-radius: 0.25rem;
     display: flex;
@@ -63,6 +84,22 @@
         padding-left: 0rem;
         padding-right: 0rem;
         height: 6.5rem;
+    }
+    div{
+        margin:1rem;
+        cursor:pointer;
+        color:$white;
+        font-family: $inherit;
+        font-size: large;
+        @media screen and (max-width :150px){
+            margin-right:0.625rem;
+        }
+        &:hover{
+            color:$greyhover;
+        }
+    }
+    p{
+        color: $white;
     }
 }
 
