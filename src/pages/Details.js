@@ -14,9 +14,10 @@ import { DarkContext } from "../context/DarkContext";
 
 export default function Details() {
 
+    const lang = useSelector((state)=>state.language.value)
     const specific = useSelector((state) => state.specific.value);
     const [celsius, setCelsius] = useState('c')
-    const {setDark,darkTheme} = useContext(DarkContext)
+    const {setDark,darkTheme,dark} = useContext(DarkContext)
 
     const tempChange = useCallback(() => {
         setCelsius(celsius === 'c' ? 'f' : 'c')
@@ -27,14 +28,14 @@ export default function Details() {
             <Header />
             <Language />
             {specific ?
-                <div className={styles.containerTwo}>
+                <div className={!dark ? styles.containerTwo : styles.containerTwoDark}>
                     <DateSearch />
                     <City />
                     <figure>
-                        <button onClick={() => setDark(prevDark => !prevDark)}>dark</button>
-                        <button onClick={() => setCelsius(celsius === 'c' ? 'f' : 'c')}>temp</button>
+                        <button onClick={() => setDark(prevDark => !prevDark)}>{dark ? lang.light : lang.dark }</button>
+                        <button onClick={() => setCelsius(celsius === 'c' ? 'f' : 'c')}>{lang.temp}</button>
                     </figure>
-                    <div className={style.daycard} style={darkTheme}>
+                    <div className={!dark ? style.daycard : style.daycarDark}>
                         <CardText data={specific} temp={celsius} tempChange={tempChange} />
                     </div>
                     <Footer />

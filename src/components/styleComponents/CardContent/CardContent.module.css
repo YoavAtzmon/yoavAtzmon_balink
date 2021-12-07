@@ -3,6 +3,14 @@
   cursor: pointer;
 }
 
+.cardcontent div {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  right: 0;
+  left: 0;
+  height: 6rem;
+}
+
 .cardcontent section {
   display: -webkit-box;
   display: -ms-flexbox;

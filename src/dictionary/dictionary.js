@@ -36,7 +36,10 @@ export const english = {
     mb:'mb',
     err:`Somthing went wrong :(`,
     cors:'you need to add cors to your browser',
-    reserved :'©ALL RIGHTS RESERVED YOAV ATZMON 2021'
+    reserved :'©ALL RIGHTS RESERVED YOAV ATZMON 2021',
+    dark: 'dark',
+    light:'light',
+    temp:'temp'
 }
 
 export const hebrew = {
@@ -104,5 +107,8 @@ export const hebrew = {
     Clear :'בהיר',
     err:' :( משהו השתבש',
     cors : 'התקינו קורס(cors) בדפדפן',
-    reserved : '©כל הזכויות שמורות יואב עצמון 2021'
+    reserved : '©כל הזכויות שמורות יואב עצמון 2021',
+    dark: 'כהה',
+    light:'בהיר',
+    temp:`טמפ'`
 }

@@ -101,4 +101,112 @@
     display: none;
   }
 }
+
+.navbarHebDark {
+  background-color: #0000ffab;
+  height: 6rem;
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000000bf;
+  color: white;
+}
+
+@media (max-width: 250px) {
+  .navbarHebDark {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    height: 6.5rem;
+  }
+}
+
+.navbarHebDark div {
+  margin: 1rem;
+  cursor: pointer;
+  color: white;
+  font-family: inherit;
+  font-size: large;
+}
+
+.navbarHebDark div:hover {
+  color: #a38d8d;
+}
+
+.navbarHebDark p {
+  color: white;
+}
+
+@media (max-width: 165px) {
+  .navbarHebDark p {
+    display: none;
+  }
+}
+
+.navbarEngDark {
+  background-color: #0000ffab;
+  height: 6rem;
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 2.5rem;
+  padding-right: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000000bf;
+  color: white;
+}
+
+@media (max-width: 250px) {
+  .navbarEngDark {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    height: 6.5rem;
+  }
+}
+
+.navbarEngDark div {
+  margin: 1rem;
+  cursor: pointer;
+  color: white;
+  font-family: inherit;
+  font-size: large;
+}
+
+.navbarEngDark div:hover {
+  color: #a38d8d;
+}
+
+.navbarEngDark p {
+  color: white;
+}
+
+@media (max-width: 165px) {
+  .navbarEngDark p {
+    display: none;
+  }
+}
 /*# sourceMappingURL=NavBar.module.css.map */

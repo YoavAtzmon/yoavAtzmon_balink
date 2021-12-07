@@ -1,24 +1,26 @@
-import { memo,useMemo } from "react";
+import { useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getSpecific } from "../../../store/Specific";
 import { useNavigate } from "react-router-dom"
 import style from "../../styleComponents/CardContent/CardContent.module.css"
 import {helpers} from "../../../helperFunctions/helperFunctions"
 
- function CardText({ data, index, temp,tempChange}){
+
+ function CardText({ data, index, temp, tempChange}){
 
     const lang = useSelector((state) => state.language.value)
     const dispatch = useDispatch();
     const Navigate = useNavigate()
 
+    
     //formating the temperature relative to the user selection
     //useMemo make this function re-rendering only when the temp is changing .
     const tem = useMemo(()=>{
-        return helpers.formatingCelsiusToFahrenheit(data.min_temp,data.max_temp)
+        return helpers.formatingCelsiusToFahrenheit(data.min_temp,data.max_temp,temp)
     },[temp])
    
-    //creating a var in order to success get the icon for the weather status
-     //the function re-rendering only at the first time and not every time the component is re-rendering(etc when the temp buttom pressed)
+    
+     //the function re-rendering only at the first time and not every time the component is re-rendering(e.g when the temp buttom pressed)
     const discription = useMemo(()=>{
         return helpers.foramtWeatherDiscription(data.weather_state_name)
     },[data.weather_state_name])
@@ -78,4 +80,4 @@ import {helpers} from "../../../helperFunctions/helperFunctions"
 
     )
 }
-export default memo(CardText);
+export default CardText;

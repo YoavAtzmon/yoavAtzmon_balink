@@ -69,4 +69,76 @@
     margin-top: -1rem;
   }
 }
+
+.allcarDark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  margin: 2% 0 10% 0;
+  position: relative;
+}
+
+.allcarDark figure {
+  position: absolute;
+  top: -4.5rem;
+  right: 0;
+  left: 0;
+}
+
+@media (max-width: 325px) {
+  .allcarDark figure {
+    top: -3.8rem;
+  }
+}
+
+.allcarDark figure button {
+  background-color: #000000bf;
+  color: white;
+  margin: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  font-size: initial;
+  font-family: system-ui;
+}
+
+@media (max-width: 325px) {
+  .allcarDark figure button {
+    margin: 0.3rem;
+  }
+}
+
+@media (max-width: 155px) {
+  .allcarDark figure button {
+    margin: 0.1rem;
+  }
+}
+
+.allcarDark figure :hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 315px) {
+  .allcarDark figure {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: -1rem;
+  }
+}
 /*# sourceMappingURL=AllCards.module.css.map */

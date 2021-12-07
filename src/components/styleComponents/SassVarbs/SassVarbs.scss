@@ -6,6 +6,7 @@ $sanso : Source Sans Pro;
 $sans : sans-serif;
 
 //Colors:
+$darkMode: #000000bf;
 $white : white;
 $greyhover : #a38d8d;
 $black : black;
@@ -104,6 +105,10 @@ $webic : -webkit-pictograph;
             display: none;
         }
     }
+}
+@mixin darkTheme{
+    background-color: $darkMode;
+    color: $white;
 }
 
 @mixin container($margin,$marginMedia) {

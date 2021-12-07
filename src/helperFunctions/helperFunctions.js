@@ -3,7 +3,8 @@ import dayjs from "dayjs";
  export const helpers={
     formatingCelsiusToFahrenheit,
     foramtWeatherDiscription,
-    dateConvarte
+    dateConvarte,
+    formatingCityName
  }
  
  //helper function to convert from celsius to Fahrenheit
@@ -33,4 +34,11 @@ function dateConvarte(date){
         date = date.slice(0, 8) + ' ' + date.slice(9)   
     } 
     return date
+}
+
+function formatingCityName(name){
+    if (name.includes(" ")) {
+        name = name.replace(' ', '')
+    }
+    return name
 }

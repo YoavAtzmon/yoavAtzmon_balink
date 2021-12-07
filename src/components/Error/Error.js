@@ -1,9 +1,10 @@
 import { useSelector } from 'react-redux'
 import style from '../styleComponents/Eroor/Error.module.css'
 
-export default function ErrorHandle({ err }) {
+function ErrorHandle({ err }) {
 
     const lang = useSelector((state) => state.language.value)
+    
 
     return (
         <div className={err === lang.err + ' ' + lang.cors ? style.corserror : style.error}>
@@ -11,3 +12,4 @@ export default function ErrorHandle({ err }) {
         </div>
     )
 }
+export default ErrorHandle;

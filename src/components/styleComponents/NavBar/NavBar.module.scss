@@ -6,3 +6,11 @@
 .navbarE{
     @include nav(none)
 }
+.navbarHebDark{
+    @include nav(2.5rem);
+    @include darkTheme;
+}
+.navbarEngDark{
+    @include nav(none);
+    @include darkTheme;
+}

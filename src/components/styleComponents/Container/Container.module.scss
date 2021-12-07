@@ -36,6 +36,38 @@
         }
     }
 }
+.containerTwoDark{
+    @include container(13rem,none);
+
+    figure {
+
+        button {
+            @include darkTheme;
+            margin: 1rem;
+            width: fit-content;
+            padding: 1rem;
+            border-radius: 0.3rem;
+            border: none;
+            cursor: pointer;
+            font-size: initial;
+            font-family: system-ui;
+            @media(max-width:315px){
+              margin: 0.3rem;
+            }
+            @media(max-width:155px){
+                margin: 0.1rem;
+              }
+        }
+        :hover{
+            background-color: $cardHover;
+        }
+        @media(max-width:315px){
+            position: static;
+            display: flex;
+            margin-top: -1rem;
+        }
+    }
+}
 .containerThree{
     @include container(12rem,none);
 }

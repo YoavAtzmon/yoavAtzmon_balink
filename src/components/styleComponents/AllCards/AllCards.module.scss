@@ -45,3 +45,47 @@
         }
     }
 }
+.allcarDark{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    margin: 2% 0 10% 0;
+    position: relative;
+    figure {
+        position: absolute;
+        top: -4.5rem;
+        right: 0;
+        left: 0;
+        @media(max-width:325px){
+            top: -3.8rem;
+          }
+        button {
+            @include darkTheme;
+            margin: 1rem;
+            width: fit-content;
+            padding: 1rem;
+            border-radius: 0.3rem;
+            border: none;
+            cursor: pointer;
+            font-size: initial;
+            font-family: system-ui;
+            @media(max-width:325px){
+              margin: 0.3rem;
+            }
+            @media(max-width:155px){
+                margin: 0.1rem;
+              }
+        }
+        :hover{
+            background-color: $cardHover;
+        }
+        @media(max-width:315px){
+            position: static;
+            display: flex;
+            margin-top: -1rem;
+        }
+    }
+}

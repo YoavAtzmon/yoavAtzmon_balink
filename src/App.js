@@ -13,14 +13,9 @@ function App() {
 
   const [dark,setDark] = useState('')
     
-  const darkTheme = {
-    backgroundColor: dark ? '#000000bf' : '',
-    color: dark ? 'white' : ''
-}
-  
   return (
     <div dir={lang.lang === 'hebrew' ? "rtl" : null}>
-       <DarkContext.Provider value={{dark,setDark,darkTheme}}>
+       <DarkContext.Provider value={{dark,setDark}}>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/details' element={<Details />} />

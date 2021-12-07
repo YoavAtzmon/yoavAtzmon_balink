@@ -1,21 +1,22 @@
 import { apiService } from "../../api/apiData.js"
 import { useDispatch, useSelector } from "react-redux";
 import { getWeatherData } from "../../store/Weather.js";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import ErrorHandle from "../Error/Error.js";
 import style from "../styleComponents/Select/Select.module.css"
 
 
-export default function Selects() {
+function Selects() {
 
     const dispatch = useDispatch();
     const lang = useSelector((state) => state.language.value);
     const sixDaysWeather = useSelector(state => state.weather.value)
     const [error, setError] = useState('');
- 
+
     //setting the city state by the user selection
     async function handleOnChange(event, paris) {
         if (event.target || paris === 'paris') {
+            if( event.target&&!event.target.value) return;
             try {
                 setError('');
                 const result = await apiService.getCityWoeid(paris ? paris : event.target.value)
@@ -75,3 +76,4 @@ export default function Selects() {
         </>
     )
 }
+export default memo(Selects);

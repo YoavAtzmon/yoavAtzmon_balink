@@ -5,6 +5,8 @@ import { useSelector } from "react-redux";
 import style from  "../styleComponents/LangIcon/LangIcon.module.css";
 import { memo } from "react";
 
+//wrap this component with memo to prevent unnecessary re-renders
+//e.g when the dark button is pressed,there is no reason for this component to re-render
 function Language() {
 
     //this component controls the web language with a iconButton

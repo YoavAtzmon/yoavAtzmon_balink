@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { getSpecific } from '../../store/Specific'
 import "../styleComponents/Date/Date.module.css"
 import dayjs from 'dayjs'
 
-export default function DateSearch() {
+//wrap this component with memo to prevent unnecessary re-renders
+//e.g when the dark button is pressed,there is no reason for this component to re-render
+ function DateSearch() {
 
     
     const sixDaysWeather = useSelector((state) => state.weather.value)
     const dispatch = useDispatch()
     const [end,setEnd] = useState('')
-
+    
     //formating the calendar start and end dates
     const start = dayjs(dayjs().$d).format('YYYY-MM-DD')
     
@@ -41,4 +43,4 @@ export default function DateSearch() {
         </div>
     )
 }
-
+export default memo(DateSearch);
