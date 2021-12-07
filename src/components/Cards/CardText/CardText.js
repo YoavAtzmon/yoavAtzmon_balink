@@ -27,7 +27,6 @@ function CardText({ data, index, tempChange, temp }) {
     }
 
     return (
-        // <div className={!dark ? style.cardcontent : style.cardcontentDark } >
         <div className={style.cardcontent} >
             <h1 onClick={handleClicke}>
                 {index === 0 ?
