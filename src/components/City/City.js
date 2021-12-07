@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { useSelector } from "react-redux"
 import ErrorHandle from "../Error/Error";
-import style from "../styleComponents/CityName/CityName.module.css"
+import style from "../styleComponents/City/City.module.css"
 import { helpers } from "../../helperFunctions/helperFunctions";
 
 //wrap this component with memo to prevent unnecessary re-renders

@@ -1,43 +1,37 @@
-import { useMemo } from "react";
+import { useMemo,memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getSpecific } from "../../../store/Specific";
-import { useNavigate } from "react-router-dom"
-import style from "../../styleComponents/CardContent/CardContent.module.css"
 import {helpers} from "../../../helperFunctions/helperFunctions"
+import style from "../../styleComponents/CardText/CardText.module.css"
 
+ function CardText({ data, index, tempChange, temp }){
 
- function CardText({ data, index, temp, tempChange}){
-
-    const lang = useSelector((state) => state.language.value)
+    const lang = useSelector((state) => state.language.value);
     const dispatch = useDispatch();
-    const Navigate = useNavigate()
 
-    
-    //formating the temperature relative to the user selection
-    //useMemo make this function re-rendering only when the temp is changing .
+    //useMemo make this function re-rendering only when the temp is changing 
+    //This is in case that one day something else(like other button)will cause re-render  
     const tem = useMemo(()=>{
-        return helpers.formatingCelsiusToFahrenheit(data.min_temp,data.max_temp,temp)
+        return helpers.formatingCelsiusToFahrenheit(data.min_temp,data.max_temp,temp);
     },[temp])
-   
     
-     //the function re-rendering only at the first time and not every time the component is re-rendering(e.g when the temp buttom pressed)
+     //the function re-rendering only when his dependencies change every time the component is re-rendering(e.g when the temp buttom pressed)
     const discription = useMemo(()=>{
-        return helpers.foramtWeatherDiscription(data.weather_state_name)
+        return helpers.foramtWeatherDiscription(data.weather_state_name);
     },[data.weather_state_name])
   
-    //reorder the date for the format i want to display
+    //the function re-rendering only when his dependencies change 
     const date = useMemo(()=>{
-        return helpers.dateConvarte(data.applicable_date)
+        return helpers.dateConvarte(data.applicable_date);
     },[data.applicable_date])
 
     //by clicking on a specific day you'll navigate to the details page
     function handleClicke() {
-        dispatch(getSpecific(data))
-        Navigate('/details')
+        dispatch(getSpecific(data));
     }
 
     return (
-
+        // <div className={!dark ? style.cardcontent : style.cardcontentDark } >
         <div className={style.cardcontent} >
             <h1  onClick={handleClicke}>
                 {index === 0 ?
@@ -80,4 +74,4 @@ import {helpers} from "../../../helperFunctions/helperFunctions"
 
     )
 }
-export default CardText;
+export default memo(CardText);

@@ -5,6 +5,13 @@
         font-family: $system;
         cursor: pointer;
     }
+    div{
+    position: absolute;
+    background-color: $cardHover;
+    right: 0;
+    left: 0;
+    height: 6rem;
+    }
     section {
         display: flex;
         align-items: center;
@@ -24,7 +31,7 @@
             }
         }
     }
-    h2 {
+    >h2 {
         font-variant-numeric: "revert";
         cursor: pointer;
     }
@@ -32,4 +39,6 @@
         text-decoration: underline;
     }
 }
+
+
 

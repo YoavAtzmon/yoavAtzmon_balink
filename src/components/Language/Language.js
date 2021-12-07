@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { changeLanguage } from "../../store/Language";
 import { english, hebrew } from "../../dictionary/dictionary";
 import { useSelector } from "react-redux";
-import style from  "../styleComponents/LangIcon/LangIcon.module.css";
+import style from  "../styleComponents/Language/Language.module.css";
 import { memo } from "react";
 
 //wrap this component with memo to prevent unnecessary re-renders

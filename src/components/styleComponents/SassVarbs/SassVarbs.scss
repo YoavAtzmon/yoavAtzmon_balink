@@ -18,8 +18,6 @@ $optionHover : #ffffff11;
 $cardColor : #ffffff5e;
 $cardHover :  rgba(0, 0, 0, 0.2);
 $calendar : rgba(245, 222, 179, 0.179);
-$webic : -webkit-pictograph;
-
 
 //@mixing
 @mixin selectStyle($left,$right) {
@@ -69,7 +67,6 @@ $webic : -webkit-pictograph;
         padding: 0.1rem;
     }
 }
-
 @mixin nav($rightPadd) {
     background-color: $blue;
     height: 6rem;
@@ -110,7 +107,6 @@ $webic : -webkit-pictograph;
     background-color: $darkMode;
     color: $white;
 }
-
 @mixin container($margin,$marginMedia) {
         display:flex;
         align-items:center;

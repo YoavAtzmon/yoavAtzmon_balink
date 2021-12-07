@@ -4,7 +4,7 @@ import Header from "../components/Header/Header";
 import Language from "../components/Language/Language";
 import Select from "../components/Selecet/Select"
 import Footer from "../components/Footer/Footer";
-import style from  "../components/styleComponents/Container/Container.module.css"
+import style from  "../components/styleComponents/Home/Home.module.css"
 
 export default function Home() {
 
@@ -12,7 +12,7 @@ export default function Home() {
         <>
             <Header />
             <Language />
-            <div className={style.containerOne}>
+            <div className={style.container}>
                 <Select />
                 <City />
                 <Cards />

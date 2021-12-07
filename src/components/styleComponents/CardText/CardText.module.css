@@ -41,7 +41,7 @@
   }
 }
 
-.cardcontent h2 {
+.cardcontent > h2 {
   font-variant-numeric: "revert";
   cursor: pointer;
 }
@@ -49,4 +49,4 @@
 .cardcontent h3 {
   text-decoration: underline;
 }
-/*# sourceMappingURL=CardContent.module.css.map */
+/*# sourceMappingURL=CardText.module.css.map */

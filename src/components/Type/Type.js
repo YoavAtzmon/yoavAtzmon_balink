@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import TypeAnimation from 'react-type-animation'
-import style from '../styleComponents/TypeDiv/TypeDiv.module.css'
+import style from '../styleComponents/Type/Type.module.css'
 
 export default function Type() {
 

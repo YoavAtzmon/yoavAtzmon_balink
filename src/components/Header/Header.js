@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
-import style from '../styleComponents/NavBar/NavBar.module.css'
+import style from '../styleComponents/Header/Header.module.css'
 import {memo,useContext} from "react"
 import { DarkContext } from "../../context/DarkContext"
 

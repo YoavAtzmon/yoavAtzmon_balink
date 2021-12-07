@@ -1,0 +1,20 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 13rem;
+}
+
+@media (max-width: 865px) {
+  .container {
+    margin-top: 10rem;
+  }
+}
+/*# sourceMappingURL=Home.module.css.map */

@@ -7,9 +7,8 @@ import Language from "../components/Language/Language";
 import Type from "../components/Type/Type";
 import Footer from "../components/Footer/Footer";
 import DateSearch from "../components/DateSearch/DateSearch";
-import styles from "../components/styleComponents/Container/Container.module.css"
-import style from "../components/styleComponents/DayCard/DayCard.module.css"
 import { DarkContext } from "../context/DarkContext";
+import style from "../components/styleComponents/Details/Details.module.css";
 
 
 export default function Details() {
@@ -28,7 +27,7 @@ export default function Details() {
             <Header />
             <Language />
             {specific ?
-                <div className={!dark ? styles.containerTwo : styles.containerTwoDark}>
+                <div className={!dark ? style.container : style.containerDark}>
                     <DateSearch />
                     <City />
                     <figure>
@@ -41,7 +40,7 @@ export default function Details() {
                     <Footer />
                 </div>
                 :
-                <div className={styles.containerThree}>
+                <div className={style.containerTwo}>
                     <Type />
                     <Footer />
                 </div>

@@ -2,7 +2,7 @@ import React, { memo, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { getSpecific } from '../../store/Specific'
-import "../styleComponents/Date/Date.module.css"
+import  "../styleComponents/DateSearch/DateSearch.module.css"
 import dayjs from 'dayjs'
 
 //wrap this component with memo to prevent unnecessary re-renders

@@ -1,0 +1,5 @@
+@import "../SassVarbs/SassVarbs.scss";
+
+.container{
+    @include container(13rem,10rem);
+}

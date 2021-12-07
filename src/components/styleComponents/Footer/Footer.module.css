@@ -3,8 +3,9 @@
 }
 
 .footer h3 {
-  font-family: sans-serif;
+  font-family: fantasy;
   padding: 1rem;
   font-size: 1.3rem;
+  font-weight: 100;
 }
 /*# sourceMappingURL=Footer.module.css.map */

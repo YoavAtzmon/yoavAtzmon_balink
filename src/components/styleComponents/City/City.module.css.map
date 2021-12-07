@@ -2,9 +2,9 @@
     "version": 3,
     "mappings": "AAEA,AAAA,SAAS,CAAC;EACN,SAAS,EAAE,MAAM;EACjB,YAAY,EAAE,WAAW;EACzB,WAAW,EAAE,GAAG;EAChB,WAAW,ECHJ,OAAO;CDIjB",
     "sources": [
-        "CityName.module.scss",
+        "City.module.scss",
         "../SassVarbs/SassVarbs.scss"
     ],
     "names": [],
-    "file": "CityName.module.css"
+    "file": "City.module.css"
 }
