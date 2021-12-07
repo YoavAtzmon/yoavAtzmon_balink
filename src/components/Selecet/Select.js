@@ -16,10 +16,11 @@ function Selects() {
     //setting the city state by the user selection
     async function handleOnChange(event, paris) {
         if (event.target || paris === 'paris') {
-            if( event.target&&!event.target.value) return;
+            if (event.target && !event.target.value) return;
             try {
                 setError('');
                 const result = await apiService.getCityWoeid(paris ? paris : event.target.value)
+                sessionStorage.city = JSON.stringify(result)
                 dispatch(getWeatherData(result))
             }
             catch (error) {
@@ -30,15 +31,16 @@ function Selects() {
 
     //display Paris weather by default 
     useEffect(() => {
-        handleOnChange('', 'paris')
+        if(!sessionStorage.city) handleOnChange('', 'paris')
+        else  dispatch(getWeatherData(JSON.parse(sessionStorage.city)))
     }, [])
 
 
     return (
         <>
-            {sixDaysWeather&&
+            {sixDaysWeather &&
                 <select
-                    className={lang.lang === 'hebrew' ? style.selectH : style.selectE }
+                    className={lang.lang === 'hebrew' ? style.selectH : style.selectE}
                     name="select"
                     onChange={handleOnChange}
                     multiple

@@ -10,7 +10,7 @@ function City() {
 
     const city = useSelector((state) => state.weather.value);
     const lang = useSelector((state) => state.language.value);
-    const cityTitle = city&&helpers.formatingCityName(city.title);
+    const cityTitle = city && helpers.formatingCityName(city.title);
 
     return (
         city ?

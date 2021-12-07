@@ -242,15 +242,36 @@
   background: #3d62874a;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1150px) {
   .daycarDark {
     width: 25%;
+    padding: 3rem 1rem;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1150px) {
   .daycarDark {
-    width: 60%;
+    width: 36%;
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .daycarDark {
+    width: 36%;
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .daycarDark {
+    width: 39%;
+  }
+}
+
+@media (max-width: 739px) {
+  .daycarDark {
+    width: 50%;
   }
 }
 

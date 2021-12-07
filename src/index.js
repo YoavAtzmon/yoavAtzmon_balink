@@ -18,7 +18,6 @@ const store = configureStore({
   }
 })
 
-
 ReactDOM.render(
   <React.StrictMode>
     <Router>

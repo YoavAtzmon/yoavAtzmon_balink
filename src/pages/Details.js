@@ -13,11 +13,13 @@ import style from "../components/styleComponents/Details/Details.module.css";
 
 export default function Details() {
 
-    const lang = useSelector((state)=>state.language.value)
+    const lang = useSelector((state) => state.language.value)
     const specific = useSelector((state) => state.specific.value);
     const [celsius, setCelsius] = useState('c')
-    const {setDark,darkTheme,dark} = useContext(DarkContext)
+    const { setDark,dark } = useContext(DarkContext)
 
+    //With the useCallbacks-when this component(Details) are re-rendering(because of the dark button)
+    //this function memoiz the value from the last render,and prevent an unnecessary re-render of the child(CardText)
     const tempChange = useCallback(() => {
         setCelsius(celsius === 'c' ? 'f' : 'c')
     }, [celsius])
@@ -31,7 +33,7 @@ export default function Details() {
                     <DateSearch />
                     <City />
                     <figure>
-                        <button onClick={() => setDark(prevDark => !prevDark)}>{dark ? lang.light : lang.dark }</button>
+                        <button onClick={() => setDark(prevDark => !prevDark)}>{dark ? lang.light : lang.dark}</button>
                         <button onClick={() => setCelsius(celsius === 'c' ? 'f' : 'c')}>{lang.temp}</button>
                     </figure>
                     <div className={!dark ? style.daycard : style.daycarDark}>
