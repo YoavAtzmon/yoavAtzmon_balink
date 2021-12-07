@@ -1,8 +1,9 @@
+import { memo } from "react";
 import { useSelector } from "react-redux"
 import ErrorHandle from "../Error/Error";
-import "../styleComponents/CityName/CityName.css"
+import style from "../styleComponents/CityName/CityName.module.css"
 
-export default function City() {
+function City() {
 
     const city = useSelector((state) => state.weather.value);
     const lang = useSelector((state) => state.language.value);
@@ -15,10 +16,11 @@ export default function City() {
 
     return (
         city ?
-            <h1 className="cityname">
+            <h1 className={style.cityname}>
                 {lang.lang === 'hebrew' ? lang[cityTitle.toLowerCase()] : city.title}
             </h1> :
             <ErrorHandle err={lang.err + " " + lang.cors} />
 
     )
 }
+export default memo(City);

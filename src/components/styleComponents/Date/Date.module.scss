@@ -1,0 +1,25 @@
+@import '../SassVarbs/SassVarbs.scss';
+
+input[type=date]{
+    background-color: $cardColor;
+    font-family: $sanso;
+    font-size: larger;
+    border: none;
+    border-radius: 0.32rem;
+    padding: 0.4rem 1rem;
+    text-align: center;
+    width: 11rem;
+    @media(max-width:245px){
+        width:9rem
+    }
+    @media(max-width:200px){
+        width:7rem
+    }
+}
+::-webkit-calendar-picker-indicator{
+    background-color:$calendar;
+    cursor: pointer;
+    &:hover{
+        background-color: $cardHover;
+    }
+}

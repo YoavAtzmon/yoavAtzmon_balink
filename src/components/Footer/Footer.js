@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { useSelector } from 'react-redux';
-import '../styleComponents/Footer/Footer.css'
+import style from '../styleComponents/Footer/Footer.module.css'
 
-export default function Footer() {
+function Footer() {
 
     const lang = useSelector((state) => state.language.value);
 
     return (
-        <div className="footer">
+        <div className={style.footer}>
             <h3>{lang.reserved}</h3>
         </div>
     )
 }
+export default memo(Footer);
 
 

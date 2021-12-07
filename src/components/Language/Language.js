@@ -2,15 +2,16 @@ import { useDispatch } from "react-redux";
 import { changeLanguage } from "../../store/Language";
 import { english, hebrew } from "../../dictionary/dictionary";
 import { useSelector } from "react-redux";
-import "../styleComponents/LangIcon/LangIcon.css";
+import style from  "../styleComponents/LangIcon/LangIcon.module.css";
+import { memo } from "react";
 
-export default function Language() {
+function Language() {
 
     //this component controls the web language with a iconButton
-
     const lang = useSelector((state) => state.language.value)
     const dispatch = useDispatch()
-
+  
+    
     function language() {
         localStorage.lang = JSON.stringify(lang.lang === 'hebrew' ? english : hebrew)
         dispatch(changeLanguage(lang.lang === 'hebrew' ? english : hebrew))
@@ -20,7 +21,7 @@ export default function Language() {
     return (
         <div onClick={language} >
             <img
-                className="icon"
+                className={style.icon}
                 alt=""
                 src={`https://cdn-icons-png.flaticon.com/512/197/${lang.lang === 'hebrew' || !lang ? 197577 : 197484}.png`}
             />
@@ -28,3 +29,4 @@ export default function Language() {
 
     )
 }
+export default memo(Language);

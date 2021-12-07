@@ -1,13 +1,13 @@
 import { useSelector } from 'react-redux'
 import TypeAnimation from 'react-type-animation'
-import '../styleComponents/TypeDiv/TypeDiv.css'
+import style from '../styleComponents/TypeDiv/TypeDiv.module.css'
 
 export default function Type() {
 
     const lang = useSelector((state) => state.language.value)
 
     return (
-        <div className="typed">
+        <div className={style.typed}>
             <TypeAnimation
                 cursor={true}
                 sequence={[

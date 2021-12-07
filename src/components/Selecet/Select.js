@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getWeatherData } from "../../store/Weather.js";
 import { useEffect, useState } from "react";
 import ErrorHandle from "../Error/Error.js";
-import "../styleComponents/Select/Select.css"
+import style from "../styleComponents/Select/Select.module.css"
+
 
 export default function Selects() {
 
@@ -11,12 +12,10 @@ export default function Selects() {
     const lang = useSelector((state) => state.language.value);
     const sixDaysWeather = useSelector(state => state.weather.value)
     const [error, setError] = useState('');
-
+ 
     //setting the city state by the user selection
     async function handleOnChange(event, paris) {
-
         if (event.target || paris === 'paris') {
-
             try {
                 setError('');
                 const result = await apiService.getCityWoeid(paris ? paris : event.target.value)
@@ -36,9 +35,9 @@ export default function Selects() {
 
     return (
         <>
-            {sixDaysWeather ?
+            {sixDaysWeather&&
                 <select
-                    className={lang.lang === 'hebrew' ? 'selectH' : 'selectE'}
+                    className={lang.lang === 'hebrew' ? style.selectH : style.selectE }
                     name="select"
                     onChange={handleOnChange}
                     multiple
@@ -71,7 +70,7 @@ export default function Selects() {
                     <optgroup label={lang.australia}>
                         <option value='sydney'>{lang.sydney}</option>
                     </optgroup>
-                </select> : ""}
+                </select>}
             {error && <ErrorHandle err={error} />}
         </>
     )

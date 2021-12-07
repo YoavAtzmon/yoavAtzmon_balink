@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,OAAO,CAAA;EACH,UAAU,EAAE,MAAM;CAMrB;;AAPD,AAEI,OAFG,CAEH,EAAE,CAAA;EACE,WAAW,ECAX,UAAU;EDCV,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,MAAM;CACpB",
+    "sources": [
+        "Footer.module.scss",
+        "../SassVarbs/SassVarbs.scss"
+    ],
+    "names": [],
+    "file": "Footer.module.css"
+}

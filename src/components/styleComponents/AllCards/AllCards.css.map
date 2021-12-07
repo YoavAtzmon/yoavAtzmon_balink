@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,OAAO,EAAC,IAAI;EACZ,WAAW,EAAC,MAAM;EAClB,SAAS,EAAC,IAAI;EACd,UAAU,EAAC,MAAM;EACjB,eAAe,EAAG,MAAM;EACxB,KAAK,EAAC,GAAG;EACT,MAAM,EAAE,UAAU;CACrB",
-    "sources": [
-        "AllCards.scss"
-    ],
-    "names": [],
-    "file": "AllCards.css"
-}

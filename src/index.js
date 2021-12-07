@@ -8,7 +8,7 @@ import weatherReducer from "./store/Weather"
 import languageReducer from "./store/Language"
 import specificReducer from "./store/Specific"
 import reportWebVitals from './reportWebVitals';
-import './components/styleComponents/Body/Body.css'
+import './components/styleComponents/Body/Body.module.css'
 
 const store = configureStore({
   reducer: {

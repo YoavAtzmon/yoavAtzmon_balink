@@ -1,0 +1,30 @@
+.corserror {
+  width: 40%;
+  color: #c30000d6;
+  position: absolute;
+  bottom: 13rem;
+  text-align: center;
+}
+
+@media (max-height: 680px) {
+  .corserror {
+    bottom: 5rem;
+  }
+}
+
+@media (max-width: 250px) {
+  .corserror {
+    bottom: 3rem;
+  }
+}
+
+@media (max-width: 200px) {
+  .corserror {
+    bottom: 1.5rem;
+  }
+}
+
+.error {
+  color: #c30000d6;
+}
+/*# sourceMappingURL=Error.module.css.map */

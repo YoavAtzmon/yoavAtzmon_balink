@@ -1,0 +1,32 @@
+input[type=date] {
+  background-color: #ffffff5e;
+  font-family: Source Sans Pro;
+  font-size: larger;
+  border: none;
+  border-radius: 0.32rem;
+  padding: 0.4rem 1rem;
+  text-align: center;
+  width: 11rem;
+}
+
+@media (max-width: 245px) {
+  input[type=date] {
+    width: 9rem;
+  }
+}
+
+@media (max-width: 200px) {
+  input[type=date] {
+    width: 7rem;
+  }
+}
+
+::-webkit-calendar-picker-indicator {
+  background-color: rgba(245, 222, 179, 0.179);
+  cursor: pointer;
+}
+
+::-webkit-calendar-picker-indicator:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=Date.module.css.map */

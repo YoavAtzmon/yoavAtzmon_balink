@@ -1,39 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import '../styleComponents/Date/Date.css'
 import { getSpecific } from '../../store/Specific'
+import "../styleComponents/Date/Date.module.css"
+import dayjs from 'dayjs'
 
 export default function DateSearch() {
 
+    
     const sixDaysWeather = useSelector((state) => state.weather.value)
     const dispatch = useDispatch()
+    const [end,setEnd] = useState('')
 
     //formating the calendar start and end dates
-    let start = new Date()
-    let end = new Date(Date.now(start) + 432000000)
-    start = start.toISOString().split('T')[0]
-    end = end.toISOString().split('T')[0]
-
-
+    const start = dayjs(dayjs().$d).format('YYYY-MM-DD')
+    
     //display the selected date from the calendar
     async function handleChange(event) {
-
-        if (sixDaysWeather) {
-            sixDaysWeather.consolidated_weather.forEach(item => {
+            sixDaysWeather.consolidated_weather.forEach((item,index) => {
                 if (item['applicable_date'] === event.target.value) {
                     dispatch(getSpecific(item))
                 }
             })
-        }
     }
+
+    useEffect(()=>{
+        sixDaysWeather&&setEnd(sixDaysWeather.consolidated_weather[5]['applicable_date'])
+    },[])
+
 
     return (
         <div>
             <input
                 type="date"
                 min={start}
-                max={end}
+                max={end&&end}
                 onChange={handleChange}
                 onKeyDown={(e) => e.preventDefault()}
             />

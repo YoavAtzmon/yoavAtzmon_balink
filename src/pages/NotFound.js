@@ -1,10 +1,10 @@
 import pic from '../images/fourOfour.png'
-import "../components/styleComponents/Container/Container.css"
+import style from "../components/styleComponents/Container/Container.module.css"
 
 
 export default function NotFound() {
     return (
-        <div className="containerNotFound">
+        <div className={style.containerNotFound}>
             <h1>PAGE NOT FOUND!</h1>
             <img src={pic} alt="" />
         </div>
